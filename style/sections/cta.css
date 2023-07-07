@@ -1,0 +1,8 @@
+#cta {
+    min-height: calc(100vh - 10rem);
+    height: calc(100vh - 10rem);
+    gap: 2rem;
+
+    background-image: url('/data/cta-background.png');
+    background-size: cover;
+}

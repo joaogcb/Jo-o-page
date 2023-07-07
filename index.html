@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/nunito" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <script src="/js/tabs.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <a href="/">
+                <img src="data/logo.png" class="logo" alt="homepage">
+            </a>
+
+            <div class="options">
+                <div class="option">Como funciona?</div>
+                <div class="option" onclick="document.querySelector('#benefits').scrollIntoView({ behavior: 'smooth' })">Blog</div>
+                <div class="option">planos de Aulas</div>
+                <div class="option">Preços</div>
+                <div class="option">Contato</div>
+            </div>
+
+            <div class="auth">
+                <div class="login">
+                    <img src="data/user.png">
+                    <a href="/">Login</a>
+                </div>
+                <button>Comece agora!</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="cta">
+        <div class="info"><b>Planeje suas aulas</b> em poucos cliques<br>com o poder da <b>Inteligência Artificial</b>.</div>
+        <span>Use a Inteligência Artifical a seu favor e garanta uma experiência inovadora no <b>planejamento de aulas.</b><br>
+        É rápido, fácil e seguro. Você vai amar!</span>
+        <button>Experimente gratuitamente!</button>
+    </section>
+    <section id="features">
+        <div class="info">O que o aula.ai é capaz de fazer por você?</div>
+        <span>Usamos a mais avançada tecnologia para facilitar a vida de milhares de educadores e criadores de infoprodutos, criando Planos de Aulas personalizados e em poucos cliques.</span>
+
+        <img src="/data/title-bdr.png" width="200">
+
+        <div class="list">
+            <div class="item active" onclick="setTab(0)">Crie Planos de Aulas em segundos</div>
+            <div class="item" onclick="setTab(1)">Cronogramas completos</div>
+            <div class="item" onclick="setTab(2)">Sugestões de atividades</div>
+            <div class="item" onclick="setTab(3)">Metodologias de ensino comprovadas</div>
+            <div class="item" onclick="setTab(4)">Praticidade e economia</div>
+            <img src="/data/arrow.png" class="arrow">
+        </div>
+
+        <div class="description">
+            <img src="/data/board.png">
+
+            <div class="data">
+                <div class="top">Seu <b>Plano de Aulas</b> pronto em segundos!</div>
+                <div class="info-small">Nunca foi tão fácil e preparar seus materiais educacionais. Aproveite recursos avançados, alinhamento com as diretrizes curriculares e adaptação às necessidades dos alunos. Simplifique sua rotina, economize tempo e entregue um ensino de qualidade com nossa plataforma de AI para planejamento de aulas.</div>
+            </div>
+        </div>
+    </section>
+    <section id="benefits">
+        <div class="info"><b>Quer mais?</b></div>
+
+        <div class="list">
+            <div class="item">
+                <div class="title"><b>Personalize</b> seus planos</div>
+                <div class="info">Nossa plataforma permite que você personalize cada aspecto do seu plano de aula, desde objetivos de aprendizagem até atividades e recursos. Ajuste o nível de dificuldade, a duração das aulas e as necessidades dos seus alunos com facilidade.</div>
+            </div>
+            <div class="item">
+                <div class="title"><b>Metodologia</b> comprovada</div>
+                <div class="info">Conte com a expertise de especialistas em educação para desenvolver planos de aulas eficientes com metodologias comprovadas e aprovadas pelo MEC. Oferecemos uma variedade incrível de abordagens de ensino de acordo com sua necessidade.</div>
+            </div>
+            <div class="item">
+                <div class="title"><b>O Maior</b> Banco de Planos</div>
+                <div class="info">Explore um vasto repositório de planos de aula compartilhados por educadores de todo o mundo. Nossa plataforma reúne uma ampla gama de disciplinas, níveis de ensino e temas, garantindo que você encontre inspiração e recursos valiosos para enriquecer suas aulas.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow">
+        <div class="info">Como o <b>aula.ai</b> funciona?</div>
+        <img src="/data/title-bdr.png" width="200">
+
+        <div class="list">
+            <div class="item">
+                <div class="image"></div>
+                <div class="info">
+                    <div class="number">1</div>
+                    <div class="data">
+                        <div class="title">Escolha o <b>TEMA</b> que deseja trabalhar</div>
+                        <div class="description">Selecione o tema principal da sua aula a partir de uma ampla variedade de opções. Desde matemática até história, você encontrará uma vasta gama de temas para atender às necessidades do seu currículo.</div>
+                    </div>
+                </div>
+            </div>
+            <img src="/data/line-right.png" width="400">
+            <div class="item reverse">
+                <div class="image"></div>
+                <div class="info">
+                    <div class="number">2</div>
+                    <div class="data">
+                        <div class="title">Escolha o seu <b>PÚBLICO-ALVO</b></div>
+                        <div class="description">Identifique o público-alvo da sua aula, seja crianças em idade escolar, adolescentes ou adultos. Isso permitirá que a plataforma ajuste o conteúdo e as atividades de acordo com as características e interesses dos alunos.</div>
+                    </div>
+                </div>
+            </div>
+            <img src="/data/line-left.png" width="400">
+            <div class="item">
+                <div class="image"></div>
+                <div class="info">
+                    <div class="number">3</div>
+                    <div class="data">
+                        <div class="title">Escolha o número de <b>HORAS-AULA</b></div>
+                        <div class="description">Determine a duração total da sua aula selecionando o número de horas-aula desejado. Isso ajudará a adequar o conteúdo e as atividades para um planejamento mais preciso.</div>
+                    </div>
+                </div>
+            </div>
+            <img src="/data/line-down.png" width="200" style="transform: translate(-80px)">
+            <div class="item last">
+                <div class="info">
+                    <div class="data">
+                        <div style="display: flex;">
+                            <div class="number">4</div>
+                            <div class="title">
+                                Edite, personalize e clique em <b>GERAR PLANO!</b>
+                            </div>
+                        </div>
+                        <div class="description"> Agora é a hora de deixar sua marca! Edite e personalize o plano de aula de acordo com suas preferências e necessidades específicas. Adicione atividades extras, ajuste a sequência de ensino e inclua recursos adicionais. Depois de finalizar as alterações, clique em "Gerar Plano" para obter seu plano de aula personalizado em poucos segundos.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="experts">
+        <div class="link">Fácil né? <b>Comece agora!</b></div>
+        <div class="info">Confira o que <b>Profissionais da Educação</b> responderam quando perguntamos: <u>O que você achou do <b>aula.ai</b>?</u></div>
+        
+        <div class="list">
+            <div class="item">
+                <div class="top">
+                    <img src="/data/avatar.png" class="avatar">
+                    <div class="name">Joana Camargo</div>
+                </div>
+                <div class="bottom">"A aula.ai de IA revolucionou meu planejamento! Agora consigo criar planos de aula personalizados em segundos."</div>
+            </div>
+            <div class="item">
+                <div class="top">
+                    <img src="/data/avatar.png" class="avatar">
+                    <div class="name">Joana Camargo</div>
+                </div>
+                <div class="bottom">"A aula.ai de IA revolucionou meu planejamento! Agora consigo criar planos de aula personalizados em segundos."</div>
+            </div>
+            <div class="item">
+                <div class="top">
+                    <img src="/data/avatar.png" class="avatar">
+                    <div class="name">Joana Camargo</div>
+                </div>
+                <div class="bottom">"A aula.ai de IA revolucionou meu planejamento! Agora consigo criar planos de aula personalizados em segundos."</div>
+            </div>
+            <div class="item">
+                <div class="top">
+                    <img src="/data/avatar.png" class="avatar">
+                    <div class="name">Joana Camargo</div>
+                </div>
+                <div class="bottom">"A aula.ai de IA revolucionou meu planejamento! Agora consigo criar planos de aula personalizados em segundos."</div>
+            </div>
+            <div class="item">
+                <div class="top">
+                    <img src="/data/avatar.png" class="avatar">
+                    <div class="name">Joana Camargo</div>
+                </div>
+                <div class="bottom">"A aula.ai de IA revolucionou meu planejamento! Agora consigo criar planos de aula personalizados em segundos."</div>
+            </div>
+            <div class="item">
+                <div class="top">
+                    <img src="/data/avatar.png" class="avatar">
+                    <div class="name">Joana Camargo</div>
+                </div>
+                <div class="bottom">"A aula.ai de IA revolucionou meu planejamento! Agora consigo criar planos de aula personalizados em segundos."</div>
+            </div>
+        </div>
+    </section>
+    <section id="pricing">
+        <div class="info">Comece agora <b>GRATUITAMENTE</b></div>
+        <div class="small">e descubra como o <b>aula.ai</b> transformará a sua rotina de trabalho.</div>
+        <img src="/data/title-bdr.png" width="200">
+
+        <div class="list">
+            <div class="item">
+                <div class="title">Mensal</div>
+                <div class="price">
+                    <div class="big">r$9,90</div>
+                    <div class="small">/mês</div>
+                </div>
+                <div class="features">
+                    Acesso ilimitado<br>
+                    Variedade de temas<br>
+                    Metodologias comprovadas<br>
+                    Personalização completa<br>
+                    Banco de Dados colaborativo<br>
+                    Atualizações frequentes<br>
+                    Integração fácil<br>
+                    Suporte técnico
+                </div>
+                <button>Começar meu teste grátis!</button>
+            </div>
+            <div class="item big">
+                <div class="title">Anual</div>
+                <div class="price">
+                    <div class="big">r$99,90</div>
+                    <div class="small">/mês</div>
+                </div>
+                <div class="features">
+                    Acesso ilimitado<br>
+                    Variedade de temas<br>
+                    Metodologias comprovadas<br>
+                    Personalização completa<br>
+                    Banco de Dados colaborativo<br>
+                    Atualizações frequentes<br>
+                    Integração fácil<br>
+                    Suporte técnico
+                </div>
+                <button>Começar meu teste grátis!</button>
+            </div>
+            <div class="item">
+                <div class="title">Empresas</div>
+                <div class="price">
+                    <div class="big">Customizado</div>
+                </div>
+                <div class="features">
+                    Relatórios detalhados<br>
+                    Recursos multimídia<br>
+                    Avaliações automatizadas<br>
+                    Colaboração em tempo real<br>
+                    Controle de acesso<br>
+                    Integração com LMS
+                </div>
+                <button>Começar meu teste grátis!</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="guarantee">
+        <div class="title">30-Dias - Satisfação garantida ou seu dinheiro de volta</div>
+        <div class="box">
+            <img src="/data/guarantee.png">
+            <div class="title-mobile">30-Dias - Satisfação garantida ou seu dinheiro de volta</div>
+            <div class="info">
+                Temos certeza que o AulaAI vai mudar completamente sua maneira de planejar suas aulas e seus conteúdos educativos. Por isso garantimos que você não vai correr nenhum risco de perdeu seu dinheiro em nossa plataforma.<br>
+                Então, além dos <b>3 Dias de Teste Grátis</b>, também oferecemos <b>30 Dias de Satisfação Garantida!</b><br>
+                Se você assinar o AulaAi e durante esse período não achar que é a solução ideal para você, basta entrar em contato conosco que devolvemos seu dinheiro sem pegadinha.
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="data">
+            <div class="company">
+                <img src="/data/logo-big.png">
+                <div class="info">
+                    <div class="name">aula.ai</div>
+                    <div class="data">901 South Bond Street<br>
+                    Suite 204<br>
+                    Baltimore, MD, 21231<br>
+                    USA</div>
+                </div>
+            </div>
+
+            <div class="pages">
+                <div class="item">Home</div>
+                <div class="item">Como funciona?</div>
+                <div class="item">Blog</div>
+                <div class="item">Blog</div>
+                <div class="item">Banco de Planos</div>
+                <div class="item">Trabalhe conosco</div>
+                <div class="item">Preços</div>
+                <div class="item">Contato</div>
+                <div class="item">Login</div>
+            </div>
+        </div>
+
+        <div id="copyrights">
+            <div>Copyright © 2023 aulaai.com</div> | <div>Todos os direitos reservados</div> | <a>Termos de serviço</a> | <a>Política de privacidade</a> | <img src="/data/facebook.png"> <img src="/data/twitter.png">
+        </div>
+    </footer>
+</body>
+</html>

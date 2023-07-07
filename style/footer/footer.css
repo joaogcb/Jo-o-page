@@ -1,0 +1,25 @@
+@import url('copyrights.css');
+@import url('company.css');
+@import url('pages.css');
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    background: #0D092C;
+    color: white;
+}
+
+footer .data {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+}
+
+@media (max-width: 790px) {
+    footer .data {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

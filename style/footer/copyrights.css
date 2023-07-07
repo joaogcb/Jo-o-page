@@ -1,0 +1,17 @@
+#copyrights {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+#copyrights img {
+    width: 1rem;
+    height: 1rem;
+}
+
+@media (max-width: 790px) {
+    #copyrights {
+        flex-wrap: wrap;
+    }
+}

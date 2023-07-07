@@ -1,0 +1,84 @@
+<link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/nunito" rel="stylesheet">
+<link rel="stylesheet" href="/css/main/block.css">
+
+<script>
+    function verificarLimite() {
+        var input = document.getElementById("numero");
+        var valor = parseInt(input.value);
+
+        if (isNaN(valor) || valor < 1) {
+            input.value = 1;
+        } else if (valor > 10) {
+            input.value = 10;
+        }
+    }
+</script>
+
+<style>
+    body {
+        display: flex;
+        align-items: center;
+
+        background-color: white;
+        text-align: center;
+        padding: 4rem;
+
+        color: #000;
+        text-align: center;
+        font-size: 1rem;
+        font-family: Work Sans;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.45rem;
+        letter-spacing: 1px;
+    }
+
+    body * {
+        margin-inline: auto;
+    }
+
+    button {
+        margin-top: 4rem;
+    }
+
+    select {
+        display: block;
+        padding: 1rem;
+
+        border-radius: 8px;
+        border: 1px solid #82C673;
+
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari and Chrome */
+        appearance:none;
+
+        position: relative;
+        margin-block: 2rem;
+        width: 40rem;
+    }
+
+    select:focus {
+        outline: none;
+    }
+
+    input {
+        width: 200px;
+        height: 30px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+
+<div>
+    Agora indique a quantidade de aulas que você pretende dedicar a essa temática.<br><br>
+
+    Considerando todas as atividades planejadas, como aulas expositivas,<br>
+    atividades práticas, resolução de exercícios, entre outros. (Lembre-se de que<br>
+    cada aula equivale a uma hora-aula com 50 minutos a uma hora de duração)
+    <br><br/>
+    <input type="number" id="numero" min="1" max="10" step="1" value="1" oninput="verificarLimite()">
+
+    <button onclick="window.parent.postMessage('nextTab', '*');">Próximo</button>
+</div>

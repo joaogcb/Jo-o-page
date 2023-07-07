@@ -1,0 +1,176 @@
+<link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/nunito" rel="stylesheet">
+<link rel="stylesheet" href="/css/main/block.css">
+
+<script>
+    function showInputPublico() {
+        var selectBox = document.getElementById("publicoSelect");
+        var userInput = document.getElementById("userInputPublico");
+
+        if (selectBox.value === "Outros") {
+            userInput.style.display = "block";
+        } else {
+            userInput.style.display = "none";
+        }
+    }
+
+    function showInputCurso() {
+        var selectBox = document.getElementById("cursoSelect");
+        var userInput = document.getElementById("userInputCurso");
+
+        if (selectBox.value === "Outros") {
+            userInput.style.display = "block";
+        } else {
+            userInput.style.display = "none";
+        }
+    }
+</script>
+
+<style>
+    body {
+        display: flex;
+        align-items: center;
+
+        background-color: white;
+        text-align: center;
+        padding: 4rem;
+
+        color: #000;
+        text-align: center;
+        font-size: 1rem;
+        font-family: Work Sans;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.45rem;
+        letter-spacing: 1px;
+    }
+
+    body * {
+        margin-inline: auto;
+    }
+
+    button {
+        margin-top: 4rem;
+    }
+
+    select {
+        display: block;
+        padding: 1rem;
+
+        border-radius: 8px;
+        border: 1px solid #82C673;
+
+        -moz-appearance:none; /* Firefox */
+        -webkit-appearance:none; /* Safari and Chrome */
+        appearance:none;
+
+        position: relative;
+        margin-block: 2rem;
+        width: 40rem;
+    }
+
+    select:focus {
+        outline: none;
+    }
+
+    input {
+        display: block;
+        resize: none;
+        width: 40rem;
+        height: 3rem;
+        border: none;
+        border-radius: 0.5rem;
+        border: 1px solid #82C673;
+        padding: 0.5rem;
+        margin-block: 1.5rem;
+        color: #202020;
+        font-size: 1rem;
+        font-family: Work Sans;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-align: left;
+    }
+
+    input::placeholder {
+        text-align: center;
+        color: #9F9F9F;
+        font-size: 1rem;
+        font-family: Work Sans;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.25rem;
+        letter-spacing: 1px;
+        white-space: pre-wrap;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+</style>
+
+<div>
+    Por favor, selecione o público-alvo para a sua aula a partir da lista de turmas cadastradas ou aponte a idade média de seus alunos:
+
+    <select id="publicoSelect" onchange="showInputPublico()">
+        <option value="1">Ensino Infantil G4</option>
+        <option value="2">Ensino Infantil G5</option>
+        <option value="3">Ensino Fundamental - 1º ano</option>
+        <option value="4">Ensino Fundamental - 2º ano</option>
+        <option value="5">Ensino Fundamental - 3º ano</option>
+        <option value="6">Ensino Fundamental - 4º ano</option>
+        <option value="7">Ensino Fundamental - 5º ano</option>
+        <option value="8">Ensino Fundamental - 6º ano</option>
+        <option value="9">Ensino Fundamental - 7º ano</option>
+        <option value="10">Ensino Fundamental - 8º ano</option>
+        <option value="11">Ensino Fundamental - 9º ano</option>
+        <option value="12">Ensino Médio - 1º ano</option>
+        <option value="13">Ensino Médio - 2º ano</option>
+        <option value="14">Ensino Médio - 3º ano</option>
+        <option value="15">Curso Pré-vestibular</option>
+        <option value="16">Graduação - 1º ano</option>
+        <option value="17">Graduação - 2º ano</option>
+        <option value="18">Graduação - 3º ano</option>
+        <option value="19">Graduação - 4º ano</option>
+        <option value="20">Graduação - 5º ano</option>
+        <option value="21">Graduação - 6º ano</option>
+        <option value="22">Pós-graduação - Lato-sensu</option>
+        <option value="23">Pós-graduação - Stricto-sensu</option>
+        <option value="Outros">Outros - descreva abaixo</option>
+    </select>
+
+    <div id="userInputPublico" style="display: none;">
+        <input type="text" id="customInput" placeholder="Ex: capacitação especial para profissionais da área da saúde">
+    </div>
+    <br />
+
+    Por favor, Selecione o curso, disciplina e/ou módulo que você estará ministrando esta aula:
+    <select id="cursoSelect" onchange="showInputCurso()">
+        <option value="1">Matemática</option>
+        <option value="2">Ciências</option>
+        <option value="3">História</option>
+        <option value="4">Geografia</option>
+        <option value="5">Biologia</option>
+        <option value="6">Física</option>
+        <option value="7">Química</option>
+        <option value="8">Sociologia</option>
+        <option value="9">Filosofia</option>
+        <option value="10">Língua Portuguesa - Gramática</option>
+        <option value="11">Língua Portuguesa - Literatura</option>
+        <option value="12">Língua Portuguesa - Redação</option>
+        <option value="13">Língua Inglesa</option>
+        <option value="14">Língua Espanhola</option>
+        <option value="15">Artes</option>
+        <option value="16">Robótica</option>
+        <option value="17">Empreendedorismo</option>
+        <option value="18">Projeto de Vida</option>
+        <option value="Outros">Outros - descreva abaixo</option>
+    </select>
+
+    <div id="userInputCurso" style="display: none;">
+        <input type="text" id="customInput" placeholder="Ex: Disciplina de geopolítica para o curso de Economia">
+    </div>
+
+    <button onclick="window.parent.postMessage('nextTab', '*');">Próximo</button>
+</div>

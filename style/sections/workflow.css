@@ -1,0 +1,109 @@
+#workflow {
+    gap: 4rem;
+}
+
+#workflow .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    font-size: 1rem;
+}
+
+#workflow .list img {
+    margin-inline: auto;
+}
+
+#workflow .item {
+    display: flex;
+    gap: 2rem;
+    max-width: 60rem;
+}
+
+#workflow .item.reverse {
+    flex-direction: row-reverse;
+}
+
+#workflow .item .info {
+    gap: 1rem;
+}
+
+#workflow .item .data {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#workflow .item .number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    border: 1px solid #DEF7F0;
+    background: #F8FCFB;
+    font-size: 1.125rem;
+    font-weight: 600;
+
+    min-width: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+#workflow .item .title {
+    color: #322F55;
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 1.625rem;
+    text-align: left;
+}
+
+#workflow .item .title b {
+    color: rgba(130, 198, 115, 1);
+}
+
+#workflow .item .description {
+    display: flex;
+    justify-content: left;
+    text-align: left;
+    color: #1E1C30;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.62rem;
+}
+
+#workflow .item.last .description {
+    text-align: center;
+}
+
+#workflow .item .image {
+    background: #82C673;
+    opacity: 0.16;
+    border-radius: 1.125rem;
+    min-width: 25rem;
+    height: 20rem;
+}
+
+#workflow .item .info {
+    display: flex;
+    font-size: 16px;
+}
+
+@media (max-width: 700px) {
+    #workflow .item {
+        flex-direction: column;
+    }
+
+    #workflow .item .image {
+        min-width: 100%;
+        width: 100%;
+    }
+
+    #workflow .item.reverse {
+        flex-direction: column;
+    }
+
+    #workflow .list img {
+        display: none;
+    }
+}

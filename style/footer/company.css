@@ -1,0 +1,35 @@
+.company {
+    display: flex;
+    gap: 2rem;
+
+    border-radius: 0.3125rem;
+    background: rgba(255, 255, 255, 0.10);
+    padding: 2rem;
+}
+
+.company img {
+    width: 8rem;
+    height: 8rem;
+}
+
+.company .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.company .name {
+    color: #FFF;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.125rem;
+    letter-spacing: 2px;
+}
+
+.company .data {
+    color: #FFF;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.3rem;
+    letter-spacing: 1px;
+}

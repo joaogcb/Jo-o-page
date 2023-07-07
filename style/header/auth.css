@@ -1,0 +1,21 @@
+header .auth {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .auth .login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+header .auth .login img {
+    width: 1.5rem;
+}
+
+@media (max-width: 700px) {
+    header .auth .login {
+        display: none;
+    }
+}

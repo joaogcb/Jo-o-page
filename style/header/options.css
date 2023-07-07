@@ -1,0 +1,27 @@
+header .options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+header .option {
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    header .options {
+        gap: 0.2rem;
+        font-size: 0.8rem;
+    }
+
+    header button {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 700px) {
+    header .options {
+        display: none;
+    }
+}
