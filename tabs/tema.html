@@ -68,6 +68,30 @@
     }
 </style>
 
+<script>
+    function getValue() {
+        return document.querySelector('textarea').value;
+    }
+
+    function setValue(value) {
+        if(!value) return;
+        document.querySelector('textarea').value = value[0];
+    }
+
+    window.parent.postMessage('getValue', '*');
+    window.addEventListener('message', function(event, value) {
+        if(event.data.startsWith('setValue')) {
+            let value = event.data.slice(9);
+            value = value.split('|');
+            setValue(value);
+        } else if(event.data == 'getValue') {
+            let value = getValue();
+            value = value ? (Array.isArray(value) ? value.join('|') : value) : '';
+            window.parent.postMessage('saveValue|' + value, '*');
+        }
+    });
+</script>
+
 <div>
     Digite abaixo <b>a temática da sua aula</b> para começarmos a criar um plano de aula inovador e personalizado para você.
 

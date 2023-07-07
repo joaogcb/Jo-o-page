@@ -107,8 +107,41 @@
     input:focus {
         outline: none;
     }
-
 </style>
+
+<script>
+    function getValue() {
+        return [
+            document.getElementById('publicoSelect').value,
+            document.querySelector('#userInputPublico input').value,
+            document.getElementById('cursoSelect').value,
+            document.querySelector('#userInputCurso input').value
+        ];
+    }
+
+    function setValue(value) {
+        if(!value) return;
+        if(value[0] != 'undefined' && value[0] != '') document.getElementById('publicoSelect').value = value[0];
+        document.querySelector('#userInputPublico input').value = value[1] == undefined ? '' : value[1];
+        if(value[2] != 'undefined' && value[0] != '') document.getElementById('cursoSelect').value = value[2];
+        document.querySelector('#userInputCurso input').value = value[3] == undefined ? '' : value[3];
+        showInputPublico();
+        showInputCurso();
+    }
+
+    window.parent.postMessage('getValue', '*');
+    window.addEventListener('message', function(event, value) {
+        if(event.data.startsWith('setValue')) {
+            let value = event.data.slice(9);
+            value = value.split('|');
+            setValue(value);
+        } else if(event.data == 'getValue') {
+            let value = getValue();
+            value = value ? (Array.isArray(value) ? value.join('|') : value) : '';
+            window.parent.postMessage('saveValue|' + value, '*');
+        }
+    });
+</script>
 
 <div>
     Por favor, selecione o público-alvo para a sua aula a partir da lista de turmas cadastradas ou aponte a idade média de seus alunos:

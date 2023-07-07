@@ -71,6 +71,30 @@
     }
 </style>
 
+<script>
+    function getValue() {
+        return document.querySelector('input').value;
+    }
+
+    function setValue(value) {
+        if(!value || value == '') return;
+        document.querySelector('input').value = value;
+    }
+
+    window.parent.postMessage('getValue', '*');
+    window.addEventListener('message', function(event, value) {
+        if(event.data.startsWith('setValue')) {
+            let value = event.data.slice(9);
+            value = value.split('|');
+            setValue(value);
+        } else if(event.data == 'getValue') {
+            let value = getValue();
+            value = value ? (Array.isArray(value) ? value.join('|') : value) : '';
+            window.parent.postMessage('saveValue|' + value, '*');
+        }
+    });
+</script>
+
 <div>
     Agora indique a quantidade de aulas que você pretende dedicar a essa temática.<br><br>
 

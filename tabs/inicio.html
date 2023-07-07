@@ -30,6 +30,12 @@
     }
 </style>
 
+<script>
+    window.addEventListener('message', function(event, value) {
+        if(event.data == 'getValue') window.parent.postMessage('saveValue|', '*');
+    });
+</script>
+
 <div>
     Bem-vindo ao <b>aula.ai</b>, seu assistente para criar planos de aula inovadores!<br><br>
 
