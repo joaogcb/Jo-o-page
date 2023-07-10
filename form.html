@@ -6,10 +6,9 @@
     <title>Document</title>
     <link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/nunito" rel="stylesheet">
-    <link rel="stylesheet" href="style/block.css">
-    <link rel="stylesheet" href="style/form.css">
-
-    <script src="js/form.js"></script>
+    <link rel="stylesheet" href="./style/block.css">
+    <link rel="stylesheet" href="./style/form.css">
+    <script src="./js/form.js"></script>
 </head>
 <body>
     <header>
@@ -37,30 +36,146 @@
     </header>
 
     <div id="title">
-        Title
+        Seu Plano de Aula
     </div>
 
     <section>
         <div class="block">
             <div class="tabs">
-                <div class="item" onclick="scrollToForm(1)">Form 1</div>
-                <div class="item" onclick="scrollToForm(2)">Form 2</div>
-                <div class="item" onclick="scrollToForm(3)">Form 3</div>
-                <div class="item" onclick="scrollToForm(4)">Form 4</div>
+                <div class="item" onclick="scrollToForm(1)"><b>Início</b></div>
+                <div class="item" onclick="scrollToForm(2)"><b>Plano de Aula</b></div>
+                <div class="item" onclick="scrollToForm(3)"><b>Cronograma</b></div>
+                <div class="item" onclick="scrollToForm(4)"><b>Atividades</b></div>
+                <div class="item" onclick="scrollToForm(5)"><b>Conteúdo</b></div>
+                <div class="item" onclick="scrollToForm(6)"><b>Resumo</b></div>
+                <div class="item" onclick="scrollToForm(7)"><b>Extras</b></div>
+                <div class="item" onclick="scrollToForm(8)"><b>Lista de Exercícios</b></div>
+                <div class="item" onclick="scrollToForm(9)"><b>Avaliação</b></div>
             </div>
 
             <div id="forms">
                 <div class="form">
-                    <span>Form 1</span>
-                    <textarea placeholder="Form 1" id="" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    <span>Temática</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Público Alvo</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Disciplina</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Horas-Aula</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Materiais Utilizados</span>
+                    <textarea id="" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    <br/>
+                    <span>Outas Informações</span>
+                    <textarea id="" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
                 </div>
                 <div class="form">
-                    <span>Form 2</span>
-                    <input type="text" placeholder="Form 2" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <span>Teoria da Aprendizagem</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Justificativa</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Objetivos</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Competências (BNCC)</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Contexto da Aula</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Recursos Didáticos</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Estrutura da Aula</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Metodologia de Ensino</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Tópicos</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Objetivos da Avaliação</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Referências Bibliográficas</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
                 </div>
+
                 <div class="form">
-                    <span>Form 3</span>
-                    <input type="text" placeholder="Form 3" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <span>Cronograma Resumido</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Cronograma Detalhado</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                </div>
+
+                <div class="form">
+                    <span>Atividades</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Descrição das Atividades</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                </div>
+
+                <div class="form">
+                    <span>Conteúdo</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                </div>
+
+                <div class="form">
+                    <span>Resumo pré-aula</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Resumo pós-aula</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                </div>
+
+                <div class="form">
+                    <span>Materiais Extras</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Curiosidades</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Aplicações Práticas</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                </div>
+
+                <div class="form">
+                    <span>Objetivos</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Subjetivos</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Desafios</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                </div>
+
+                <div class="form">
+                    <span>Modelos de Avaliação</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Avaliaçõa Somativas</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
+                    <span>Sugestões de Avaliação</span>
+                    <input type="text" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <br/>
                 </div>
 
                 <div style="margin-inline: auto;">
