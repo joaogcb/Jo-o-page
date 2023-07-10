@@ -36,6 +36,10 @@
         </div>
     </header>
 
+    <div id="title">
+        Title
+    </div>
+
     <section>
         <div class="block">
             <div class="tabs">
@@ -48,15 +52,15 @@
             <div id="forms">
                 <div class="form">
                     <span>Form 1</span>
-                    <textarea placeholder="Form 1" id="" cols="30" rows="10"></textarea>
+                    <textarea placeholder="Form 1" id="" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
                 </div>
                 <div class="form">
                     <span>Form 2</span>
-                    <input type="text" placeholder="Form 2">
+                    <input type="text" placeholder="Form 2" onfocus="updateActiveForm()" onblur="updateActiveForm()">
                 </div>
                 <div class="form">
                     <span>Form 3</span>
-                    <input type="text" placeholder="Form 3">
+                    <input type="text" placeholder="Form 3" onfocus="updateActiveForm()" onblur="updateActiveForm()">
                 </div>
             </div>
         </div>

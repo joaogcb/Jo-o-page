@@ -17,6 +17,10 @@
     padding: 0.5rem 1rem;
 }
 
+.tabs .item.active {
+    font-size: 1rem;
+}
+
 .tabs .item:hover {
     background-color: #ebebeb;
 }
@@ -26,7 +30,6 @@
     flex-direction: column;
     gap: 1rem;
     padding: 0.2rem;
-    max-height: 15rem;
     overflow-y: scroll;
     flex-grow: 1;
 }
@@ -43,4 +46,15 @@
     padding: 0.3125rem;
     border-radius: 5px;
     font-family: 'Work Sans', sans-serif;
+}
+
+#forms::-webkit-scrollbar {
+    display: none;
+}
+
+#title {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2rem;
+    font-weight: 600;
 }
