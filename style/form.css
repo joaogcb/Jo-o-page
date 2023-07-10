@@ -1,3 +1,23 @@
+.block {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.4rem;
+}
+
+.tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.tabs .item {
+    padding: 0.5rem 1rem;
+}
+
+.tabs .item:hover {
+    background-color: #ebebeb;
+}
+
 #forms {
     display: flex;
     flex-direction: column;
