@@ -90,12 +90,20 @@
             window.parent.postMessage('saveValue|' + value, '*');
         }
     });
+
+    function updateButton() {
+        if(getValue() == '') {
+            document.querySelector('button').classList.add('inactive');
+        } else {
+            document.querySelector('button').classList.remove('inactive');
+        }
+    }
 </script>
 
 <div>
     Digite abaixo <b>a temática da sua aula</b> para começarmos a criar um plano de aula inovador e personalizado para você.
 
-    <textarea placeholder="Ex: 2ª guerra mundial, Números irracionais, Sistema respiratório, Matemática financeira, etc." cols="30" rows="10"></textarea>
+    <textarea placeholder="Ex: 2ª guerra mundial, Números irracionais, Sistema respiratório, Matemática financeira, etc." cols="30" rows="10" oninput="updateButton()"></textarea>
 
-    <button onclick="window.parent.postMessage('nextTab', '*');">Próximo</button>
+    <button class="inactive" onclick="if(!this.classList.contains('inactive')) window.parent.postMessage('nextTab', '*');">Próximo</button>
 </div>

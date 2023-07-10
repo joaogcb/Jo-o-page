@@ -13,6 +13,14 @@ function setTab(id) {
 
 function nextTab() {
     if(currentTab == tabs.length - 1) {
+        let allFilled = true;
+
+        if(!values[1] || values[1].length == 0) allFilled = false;
+        if(!values[2] || (values[2][0] == 'Outros' && values[2][1] == '')) allFilled = false;
+        if(!values[2] || (values[2][2] == 'Outros' && values[2][3] == '')) allFilled = false;
+
+        if(!allFilled) return alert('Not all fields are filled!');
+
         alert(`
         ${JSON.stringify(values).replace(/,/g, ',\n')}
         `)

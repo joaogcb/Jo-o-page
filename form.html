@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/nunito" rel="stylesheet">
+    <link rel="stylesheet" href="style/block.css">
+    <link rel="stylesheet" href="style/form.css">
+
+    <script src="js/form.js"></script>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <a href="/">
+                <img src="data/logo.png" class="logo" alt="homepage">
+            </a>
+
+            <div class="options">
+                <div class="option">Como funciona?</div>
+                <div class="option">Blog</div>
+                <div class="option">planos de Aulas</div>
+                <div class="option">Preços</div>
+                <div class="option">Contato</div>
+            </div>
+
+            <div class="auth">
+                <div class="login">
+                    <img src="data/user.png">
+                    <a href="/">Login</a>
+                </div>
+                <button>Comece agora!</button>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="block">
+            <div class="tabs">
+                <div class="item" onclick="scrollToForm(1)">Form 1</div>
+                <div class="item" onclick="scrollToForm(2)">Form 2</div>
+                <div class="item" onclick="scrollToForm(3)">Form 3</div>
+                <div class="item" onclick="scrollToForm(4)">Form 4</div>
+            </div>
+
+            <div id="forms">
+                <div class="form">
+                    <span>Form 1</span>
+                    <textarea placeholder="Form 1" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="form">
+                    <span>Form 2</span>
+                    <input type="text" placeholder="Form 2">
+                </div>
+                <div class="form">
+                    <span>Form 3</span>
+                    <input type="text" placeholder="Form 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="data">
+            <div class="company">
+                <img src="/data/logo-big.png">
+                <div class="info">
+                    <div class="name">aula.ai</div>
+                    <div class="data">901 South Bond Street<br>
+                    Suite 204<br>
+                    Baltimore, MD, 21231<br>
+                    USA</div>
+                </div>
+            </div>
+
+            <div class="pages">
+                <div class="item">Home</div>
+                <div class="item">Como funciona?</div>
+                <div class="item">Blog</div>
+                <div class="item">Blog</div>
+                <div class="item">Banco de Planos</div>
+                <div class="item">Trabalhe conosco</div>
+                <div class="item">Preços</div>
+                <div class="item">Contato</div>
+                <div class="item">Login</div>
+            </div>
+        </div>
+
+        <div id="copyrights">
+            <div>Copyright © 2023 aulaai.com</div> | <div>Todos os direitos reservados</div> | <a>Termos de serviço</a> | <a>Política de privacidade</a> | <img src="/data/facebook.png"> <img src="/data/twitter.png">
+        </div>
+    </footer>
+</body>
+</html>

@@ -141,12 +141,22 @@
             window.parent.postMessage('saveValue|' + value, '*');
         }
     });
+
+    function updateButton() {
+        let value = getValue();
+        let canProceed = true;
+        if(value[0] == 'Outros' && value[1] == '') canProceed = false;
+        if(value[2] == 'Outros' && value[3] == '') canProceed = false;
+        document.querySelector('button').classList[canProceed ? 'remove' : 'add']('inactive');
+    }
+
+    setTimeout(updateButton, 100);
 </script>
 
 <div>
     Por favor, selecione o público-alvo para a sua aula a partir da lista de turmas cadastradas ou aponte a idade média de seus alunos:
 
-    <select id="publicoSelect" onchange="showInputPublico()">
+    <select id="publicoSelect" onchange="showInputPublico(); updateButton();">
         <option value="1">Ensino Infantil G4</option>
         <option value="2">Ensino Infantil G5</option>
         <option value="3">Ensino Fundamental - 1º ano</option>
@@ -174,12 +184,12 @@
     </select>
 
     <div id="userInputPublico" style="display: none;">
-        <input type="text" id="customInput" placeholder="Ex: capacitação especial para profissionais da área da saúde">
+        <input type="text" id="customInput" placeholder="Ex: capacitação especial para profissionais da área da saúde" oninput="updateButton();">
     </div>
     <br />
 
     Por favor, Selecione o curso, disciplina e/ou módulo que você estará ministrando esta aula:
-    <select id="cursoSelect" onchange="showInputCurso()">
+    <select id="cursoSelect" onchange="showInputCurso(); updateButton();">
         <option value="1">Matemática</option>
         <option value="2">Ciências</option>
         <option value="3">História</option>
@@ -202,8 +212,8 @@
     </select>
 
     <div id="userInputCurso" style="display: none;">
-        <input type="text" id="customInput" placeholder="Ex: Disciplina de geopolítica para o curso de Economia">
+        <input type="text" id="customInput" placeholder="Ex: Disciplina de geopolítica para o curso de Economia" oninput="updateButton();">
     </div>
 
-    <button onclick="window.parent.postMessage('nextTab', '*');">Próximo</button>
+    <button class="inactive" onclick="if(!this.classList.contains('inactive')) window.parent.postMessage('nextTab', '*');">Próximo</button>
 </div>

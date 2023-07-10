@@ -1,0 +1,26 @@
+#dropdown {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    transform: translate(0, 80%);
+    text-align: center;
+    background-color: rgb(235, 235, 235);
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.2));
+}
+
+#dropdown div {
+    padding: 0.3rem 0.7rem;
+    cursor: pointer;
+}
+
+#dropdown div:hover {
+    background-color: rgb(200, 200, 200);
+}
+
+/* make it visible when .login is hovered */
+.login:hover #dropdown {
+    display: flex;
+}

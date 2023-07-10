@@ -8,6 +8,7 @@
     <link href="https://fonts.cdnfonts.com/css/nunito" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <script src="/js/tabs.js" defer></script>
+    <script src="/js/dropdown.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,6 +29,12 @@
                 <div class="login">
                     <img src="data/user.png">
                     <a href="/">Login</a>
+
+                    <div id="dropdown" class="hidden">
+                        <div class="item">Meus Planos</div>
+                        <div class="item">Meus Dados</div>
+                        <div class="item">Sair</div>
+                    </div>
                 </div>
                 <button>Comece agora!</button>
             </div>

@@ -93,6 +93,14 @@
             window.parent.postMessage('saveValue|' + value, '*');
         }
     });
+
+    function updateButton() {
+        let value = getValue();
+        let canProceed = value && value != '';
+        document.querySelector('button').classList[canProceed ? 'remove' : 'add']('inactive');
+    }
+
+    setTimeout(updateButton, 100);
 </script>
 
 <div>
