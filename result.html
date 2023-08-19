@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/work-sans" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/nunito" rel="stylesheet">
+    <link rel="stylesheet" href="./style/block.css">
+    <link rel="stylesheet" href="./style/form.css">
+	<script src="./js/form.js"></script>
+	<script src="./js/dropdown.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <a href="/">
+                <img src="data/logo.png" class="logo" alt="homepage">
+            </a>
+
+            <div class="options">
+                <div class="option">Como funciona?</div>
+                <div class="option">Blog</div>
+                <div class="option">planos de Aulas</div>
+                <div class="option">Preços</div>
+                <div class="option">Contato</div>
+            </div>
+
+            <div class="auth">
+                <div class="login">
+                    <img src="data/user.png">
+                    <a href="/">Login</a>
+                </div>
+                <button>Comece agora!</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="title">
+        Seu Plano de Aula
+    </div>
+
+    <section>
+    <div id="gendiv" class="block">
+        <div class="tabs">
+            <div class="item" onclick="scrollToForm(1)"><b>Início</b></div>
+            <div class="item" onclick="scrollToForm(2)"><b>Plano de Aula</b></div>
+            <div class="item" onclick="scrollToForm(3)"><b>Cronograma</b></div>
+            <div class="item" onclick="scrollToForm(4)"><b>Atividades</b></div>
+            <div class="item" onclick="scrollToForm(5)"><b>Conteúdo</b></div>
+            <div class="item" onclick="scrollToForm(6)"><b>Resumo</b></div>
+            <div class="item" onclick="scrollToForm(7)"><b>Extras</b></div>
+            <div class="item" onclick="scrollToForm(8)"><b>Lista de Exercícios</b></div>
+            <div class="item" onclick="scrollToForm(9)"><b>Avaliação</b></div>
+        </div>
+
+        <div id="forms">
+            <div class="form-section">
+                <div class="form">
+                    <span>Temática</span>
+                    <input type="text" asp-for="Theme" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                </div>
+                <div class="form">
+                    <span>Público Alvo</span>
+                    <input type="text" asp-for="TargetAudience" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                </div>
+                <div class="form">
+                    <span>Disciplina</span>
+                    <input type="text" asp-for="Discipline" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    <div class="form">
+                        <span>Horas-Aula</span>
+                        <input type="text" asp-for="ClassHours" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    </div>
+                    <div class="form">
+                        <span>Materiais Utilizados</span>
+                        <textarea id="" asp-for="Material" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Outras Informações</span>
+                        <textarea id=""  asp-for="OtherInformation"  cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form">
+                        <span>Teoria da Aprendizagem</span>
+                        <input type="text" asp-for="LearningTheory" onfocus="updateActiveForm()" onblur="updateActiveForm()">
+                    </div>
+                    <div class="form">
+                        <span>Justificativa</span>
+                        <textarea id="" asp-for="Justification" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Objetivos</span>
+                        <textarea id="" asp-for="Goals" cols="30" rows="20" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Competências (BNCC)</span>
+                        <textarea id="" asp-for="Skills" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Contexto da Aula</span>
+                        <textarea id="" asp-for="ClassContext" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Recursos Didáticos</span>
+                        <textarea id="" asp-for="DidacticResources" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Estrutura da Aula</span>
+                        <textarea id="" asp-for="ClassStructure" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Metodologia de Ensino</span>
+                        <textarea id="" asp-for="TeachingMethodology" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Tópicos</span>
+                        <textarea id="" asp-for="Topics" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Objetivos da Avaliação</span>
+                        <textarea id="" asp-for="AssessmentObjectives" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Referências Bibliográficas</span>
+                        <textarea id="" asp-for="BibliographicReferences" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form">
+                        <span>Cronograma Resumido</span>
+                        <textarea id="" asp-for="SummarySchedule" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Cronograma Detalhado</span>
+                        <textarea id="" asp-for="DetailedSchedule" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+
+                    <div class="form">
+                        <span>Atividades</span>
+                        <textarea id="" asp-for="Activities" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Descrição das Atividades</span>
+                        <textarea id="" asp-for="DescriptionOfActivities" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form">
+                        <span>Conteúdo</span>
+                        <textarea id="" asp-for="Content" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form">
+                        <span>Resumo pré-aula</span>
+                        <textarea id="" asp-for="PreClassSummary" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Resumo pós-aula</span>
+                        <textarea id="" asp-for="AfterClassSummary" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form">
+                        <span>Materiais Extras</span>
+                        <textarea id="" asp-for="ExtraMaterials" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Curiosidades</span>
+                        <textarea id="" cols="30" asp-for="Curiosities" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Aplicações Práticas</span>
+                        <textarea id="" cols="30" asp-for="PracticalApplications" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form">
+                        <span>Objetivos</span>
+                        <textarea id="" cols="30" asp-for="Objectives" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Subjetivos</span>
+                        <textarea id="" asp-for="Subjective" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Desafios</span>
+                        <textarea id="" asp-for="Challenges" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form">
+                        <span>Modelos de Avaliação</span>
+                        <textarea id="" asp-for="AssessmentModels" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Avaliações Somativas</span>
+                        <textarea id="" asp-for="SummativeAssessments" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                    <div class="form">
+                        <span>Sugestões de Avaliação</span>
+                        <textarea id="" asp-for="EvaluationSuggestions" cols="30" rows="10" onfocus="updateActiveForm()" onblur="updateActiveForm()"></textarea>
+                    </div>
+                </div>
+
+                <br /><br />
+                <div class="genbtn">
+                    <button onclick="savePDF()">Gerar PDF</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <div class="data">
+            <div class="company">
+                <img src="/data/logo-big.png">
+                <div class="info">
+                    <div class="name">aula.ai</div>
+                    <div class="data">901 South Bond Street<br>
+                    Suite 204<br>
+                    Baltimore, MD, 21231<br>
+                    USA</div>
+                </div>
+            </div>
+
+            <div class="pages">
+                <div class="item">Home</div>
+                <div class="item">Como funciona?</div>
+                <div class="item">Blog</div>
+                <div class="item">Blog</div>
+                <div class="item">Banco de Planos</div>
+                <div class="item">Trabalhe conosco</div>
+                <div class="item">Preços</div>
+                <div class="item">Contato</div>
+                <div class="item">Login</div>
+            </div>
+        </div>
+
+        <div id="copyrights">
+            <div>Copyright © 2023 aulaai.com</div> | <div>Todos os direitos reservados</div> | <a>Termos de serviço</a> | <a>Política de privacidade</a> | <img src="/data/facebook.png"> <img src="/data/twitter.png">
+        </div>
+    </footer>
+</body>
+</html>
